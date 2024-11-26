@@ -24,5 +24,17 @@ public class CurrencyExchange extends BaseEntity {
     private BigDecimal amountAfterExchange;
     private String status;
 
+    public CurrencyExchange(User user, Currency toCurrency, BigDecimal amountInKrw, BigDecimal amountAfterExchange, String status) {
+        this.user = user;
+        this.toCurrency = toCurrency;
+        this.amountInKrw = amountInKrw;
+        this.amountAfterExchange = amountAfterExchange;
+        this.status = status;
+    }
+
     public CurrencyExchange() {}
+
+    public void update(String status) {
+        this.status = status;
+    }
 }
